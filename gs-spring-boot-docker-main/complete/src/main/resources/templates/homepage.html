@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .calculator {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 360px;
+            width: 100%;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .calculator h1 {
+            font-size: 1.8rem;
+            color: #4a4a4a;
+            margin-bottom: 20px;
+        }
+
+        .calculator label {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: #666;
+        }
+
+        .calculator input[type="text"] {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 20px;
+            transition: all 0.2s;
+            box-sizing: border-box;
+        }
+
+        .calculator input[type="text"]:focus {
+            border-color: #5a9ff3;
+            box-shadow: 0px 0px 6px rgba(90, 159, 243, 0.5);
+            outline: none;
+        }
+
+        .calculator button {
+            width: 100%;
+            background: linear-gradient(90deg, #5a9ff3, #407bdb);
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .calculator button:hover {
+            background: linear-gradient(90deg, #407bdb, #5a9ff3);
+            transform: translateY(-3px);
+        }
+
+        .calculator button:active {
+            transform: translateY(1px);
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="calculator">
+    <h1>Simple Calculator</h1>
+    <form action="/calculate" method="GET">
+        <label for="expression">Enter your math expression:</label>
+        <input type="text" id="expression" name="expression" placeholder="e.g., 12 / (3 + 2)" required>
+        <button type="submit">Calculate</button>
+    </form>
+    <div class="footer">
+        &copy; 2024 Calculator App
+    </div>
+</div>
+</body>
+</html>

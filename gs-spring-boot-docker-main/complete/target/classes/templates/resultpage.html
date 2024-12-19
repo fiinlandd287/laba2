@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: radial-gradient(circle, #d9f1fc 0%, #f5d0c5 100%);
+        }
+
+        .result-container {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 420px;
+            width: 100%;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fade-in 0.6s ease-out;
+        }
+
+        .result-container h1 {
+            font-size: 1.8rem;
+            color: #4caf50;
+            margin-bottom: 20px;
+        }
+
+        .result-container span {
+            color: #ff5722;
+            font-weight: bold;
+        }
+
+        .result-container a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #fff;
+            background: linear-gradient(90deg, #36d1dc, #5b86e5);
+            padding: 12px 24px;
+            border-radius: 8px;
+            display: inline-block;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(91, 134, 229, 0.4);
+        }
+
+        .result-container a:hover {
+            background: linear-gradient(90deg, #5b86e5, #36d1dc);
+            box-shadow: 0 6px 16px rgba(91, 134, 229, 0.6);
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="result-container">
+    <h1>Result: <span th:text="${result}">Result Placeholder</span></h1>
+    <a href="/">Back</a>
+</div>
+</body>
+</html>
